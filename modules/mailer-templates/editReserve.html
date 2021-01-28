@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <!-- CABECERA DEL EJERCICIO -->
+  
+      <!-- CUERPO DEL EJERCICIO -->
+  <main>
+    <div class="container">
+      <div class="row">
+
+        <div class="col-12 d-flex resultado justify-content-center align-items-center">
+          <h1>Se ha iniciado un proceso para la modificación de su cita!! </h1>
+        </div>
+        <div class="col-12 d-flex resultado justify-content-center align-items-center">
+            <h3>Si no haz sido tu, ignora este mensaje.</h3>
+            <h3>De lo contrario haz click en el siguiente enlace</h3>
+          <ul>
+            <li>Codigo: {{codigo}}</li>
+            <li>Nombre: {{name}} </li>
+            <li>Email: {{email}}</li>
+            <li>Fecha: {{fecha}}</li>
+            <li>Hora: {{hora}}</li>
+            <li>Enlace para modificar: http://localhost:8080/citas/confirm-edit-cita/{{code}}</li>
+          </ul>
+        </div>
+
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQApvPsS3Gpmi6xxVuKCKQzgqYGqdRSPzNDCw&usqp=CAU" alt="Logo empresarial" srcset="">
+        </div>
+    </div>
+  </main>
+
+    <!-- FOOTER DEL EJERCICIO -->
+    <footer>
+      <div class="footer">
+        Copyright © 2021. Política de privacidad - Aviso legal - Política de cookies 
+      </div>
+    </footer>
+  </body>
+</html>

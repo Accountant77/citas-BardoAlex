@@ -1,0 +1,69 @@
+  <!-- CUERPO DEL EJERCICIO -->
+  <main>
+    <div class="container-addCita">
+      <div class="logo item-container-addcita">
+        <img src="../images/logo1.png" alt="logo-bar">
+      </div>
+      <div class="info item-container-addcita"><p><span>Paso 1.</span> Seleccione una fecha para observar las citas disponibles. Seleccione el horario de su preferencia y confirme.</p></div>
+      <div class="container-form">
+        <div>
+          {{#if errors}}
+              <p>Hay errores en el formulario por favor corrijalos!!</p>
+            {{#each errors}}
+              <b>{{error}}</b><br>
+            {{/each}}
+          {{/if}}
+        </div>
+        <form method="POST" action="/citas/save">
+          <div class="part1" id="part1">
+            <div class="row">
+              <div class="cal">
+                <input type="text" name="rDate" id="calendar" class="part1" required>
+              </div>
+            </div>
+            <div class="showHours part1"></div>
+            <div class="hidden">
+              <input type="time" name="rHour" class="hidden-hour">
+            </div>
+            <div>
+              <button id="confirm" class="w-100 btn btn-lg btn-outline-dark part1" type="button">Confirmar</button>
+            </div>
+          </div>
+          <div id="part2" class="part2">
+            <div class="input-group mb-3 ">
+              <span class="input-group-text" id="basic-addon1">Name:</span>
+              <input type="text" class="form-control" name="rName" placeholder="Juan Antonio" required>
+            </div>
+            <div class="input-group mb-3 ">
+              <span class="input-group-text" id="basic-addon1">Lastname:</span>
+              <input type="text" class="form-control" name="rLastname" placeholder="Perez Santana" required>
+            </div>
+            <div class="input-group mb-3 ">
+              <span class="input-group-text" id="basic-addon1">Phone:</span>
+              <input type="tel" class="form-control" name="rPhone" placeholder="999999999" required minlength="9" maxlength="9">
+            </div>
+            
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">@mail</span>
+              <input type="email" class="form-control" name="rEmail" placeholder="juanSantana@gmail.com" required>
+            </div>
+            <div>
+              <button id="reservaCita" class="w-100 btn btn-lg btn-outline-dark" type="submit">Reservar Cita</button>
+            </div>
+            <div>
+              <button id="cancelar" class="w-100 btn btn-lg btn-outline-dark" type="reset"><a href="http://localhost:8080/citas/cita">Cancelar</a></button>            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+<!-- IMPLEMENTACIÓN DE FLATPICKR -->
+<!-- https://flatpickr.js.org/instance-methods-properties-elements/ -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+{{!-- <link rel="stylesheet" href="https://npmcdn.com/flatpickr/dist/themes/dark.css"> --}}
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="/js/calendar.js"></script>
+
+
+

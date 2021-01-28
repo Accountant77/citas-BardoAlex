@@ -1,0 +1,42 @@
+<main>
+    <div class="container-editCita">
+        <div>
+            <img src="../images/logo1.png" alt="logo-bar">
+        </div>
+        <div class="titulo">
+            <ul>
+                {{message}}
+            </ul>
+        </div>
+        <div>
+            <form action="/citas/confirm-edit-cita" method="post">
+                <div class="titulo-info .item-container-editcita">
+                    Ingresa el codigo de tu reserva:
+                </div>
+                <div>
+                    <div class="input-group mb-3 item-container-editcita">
+                    <span class="input-group-text" id="basic-addon1">#code:</span>
+                    <input type="text" class="form-control" name="rId" placeholder="4xJoO7" maxlength="6" required>
+                    </div>
+                </div>
+                <div class="titulo-info item-container-editcita">
+                    Ingresa tu correo:
+                </div>
+                <div>
+                    <div class="input-group mb-3 item-container-editcita">
+                    <span class="input-group-text" id="basic-addon1">@mail:</span>
+                    <input type="email" class="form-control" name="rEmail" placeholder="example@gmail.com" required>
+                    </div>
+                </div>
+                <div>    
+                    <div>
+                        <button id="editConfirmCita" class="w-100 btn btn-lg btn-outline-dark item-container-editcita" type="submit">Modificar/Eliminar Cita</button>
+                    </div>
+                    <div>
+                        <button id="cancelar" class="w-100 btn btn-lg btn-outline-dark" type="reset"><a href="http://localhost:8080/citas/cita">Volver</a></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

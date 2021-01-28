@@ -1,0 +1,40 @@
+<main>
+  <div class="container-result">
+    <div>
+      <img src="../images/logo1.png" alt="logo-bar" width="100px">
+    </div>
+    <div class="row">
+      <div class="col-12 d-flex resultado justify-content-center align-items-center">
+        <h1 class="titulo">Enhorabuena {{cita.rName}}!! </h1>
+      </div>
+      <div class="col-12 d-flex resultado justify-content-center align-items-center">
+        <h3 class="subtitulo">Tu cita a sido reservada con exito.</h3>
+      </div>
+      <div>
+        <ul>
+          <li class="items-reserve"><span>Nombre:</span> {{cita.rName}} {{cita.rLastname}}</li>
+          <li class="items-reserve"><span>Telefono:</span> {{cita.rPhone}}</li>
+          <li class="items-reserve"><span>Email:</span> {{cita.rEmail}}</li>
+          <li class="items-reserve"><span>Fecha:</span> {{cita.rDate}} - {{cita.rHour}} Horas</li>
+        </ul>
+      </div>
+      <div class="col-12 d-flex resultado justify-content-center align-items-center">
+        <canvas id="canvas"></canvas>
+          <script src="../js/build/qrcode.min.js"></script>
+          <script>
+            QRCode.toCanvas(document.getElementById('canvas'), '{{codigoQr}}', function (error) {
+              if (error) console.error(error)
+              console.log('success!');
+            })
+          </script> 
+      </div>
+      <div class="col-12 d-flex resultado justify-content-center align-items-center">
+        <h3 class="subtitulo2">Se ha enviado un correo de confirmación, revisalo!!</h3>
+      </div>
+      <div>
+        <button id="cancelar" class="w-100 btn btn-lg btn-outline-dark" type="reset"><a
+            href="http://localhost:8080/citas/cita">Volver</a></button>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,33 @@
+.container-editCita{
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(20, 1fr);
+    //grid-template-rows: 200px 200px;
+    min-height: 350px;
+    gap: 1em;
+    div{
+        padding: 5px;
+        grid-column: 1/21;
+    } 
+    :first-child{
+        grid-column: 6/21;
+        align-content: center;
+    }
+    .titulo{
+        padding-bottom: 10px;
+        justify-self: center;
+        text-align: center;
+        font-size: 20px;
+        color: #ff0000;
+    }
+    .titulo-info{
+        text-align: center;
+    }
+
+
+    
+
+   
+
+}
+

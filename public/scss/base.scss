@@ -1,0 +1,66 @@
+@import './components/newCita';
+@import './components/editCita';
+@import './components/resultCitaOk';
+@import './components/reintentarCita';
+@import './components/deleteCita';
+
+body{
+    background-color:#ffffff;
+    //background-image: url(../images/fondo.jpg);
+    font-family: 'Yusei Magic', sans-serif;
+    padding: 1em;
+    min-width: 370px;
+}
+button{
+    a {
+        color: #343a40;
+    }
+    a:link, a:visited {
+        text-decoration: none;
+        color: #343a40;
+    }
+}
+img{
+    
+    height: 70%;
+    width: 70%;
+}
+.atras{
+    display:flex;
+    width: 50px;
+    justify-content: flex-end;
+}
+div{
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    min-height: 350px;
+    gap: 1em;
+    div{
+        padding: 5px;
+        grid-column: 1/21;
+    }
+    :first-child{
+        grid-column: 6/21;
+    }
+    .titulo{
+        padding-bottom: 10px;
+        justify-self: center;
+        font-size: 30px;
+    }
+    .text{
+        padding-bottom: 10px;
+        justify-self: center;
+        font-size: 20px;
+    }
+}
+
+.footer{
+    background: rgb(179, 182, 182);
+    font-size: small;
+    text-align: center;
+    padding: 5px;
+}

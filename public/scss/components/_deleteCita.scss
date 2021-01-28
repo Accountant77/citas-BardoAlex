@@ -1,0 +1,22 @@
+
+.container-delete{
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    min-height: 350px;
+    gap: 1em;
+    div{
+        padding: 5px;
+        grid-column: 1/21;
+    }
+    .titulo{
+        h1{
+            padding-bottom: 10px;
+            justify-self: center;
+            text-align: center;
+            font-size: 30px;
+            span{
+                color: #ff0000;
+            }
+        }
+    }
+}
